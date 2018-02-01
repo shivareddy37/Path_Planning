@@ -103,3 +103,15 @@ A really helpful resource for doing this project and creating smooth trajectorie
 
 The images below shows all these things. The total time and the best time matching indicates that we didn't volaite any of the above criteries.
 ![alt text](https://github.com/shivareddy37/Path_Planning/blob/master/images/1.png)
+
+Model/ Reflections
+The bulk of work is done in main.cpp. The model of path planning can be realised in 3 diffrent parts 
+1. Predection- This module can be seen in the code from line (261-298) as is responsible for tracking other cars using the data provided from the on board sensors. This moudule essentailly performs 3 operations. 
+   a) Make sure if have in anyof the three lanes. (i.e current lane , right and left lanes.)
+   b) Use sensors to find the velocity of these cars.
+   c) check if its safe to make lane change. (any distance less than 30 m is deemed unsafe ).
+2. Behaviour Planning- The code for this module is from line (301- 360). This module recives input from the predection module make behaviour decesion for our car. It essentally make two decesions namely.
+   a) If there is car in our lane do we make lane change.
+   b) If we do decide to change lane , how do we do that with all constains. Essentally so we speed up or slow down and if         yes how so that we don't exceed the speed limit, max acc"n, max Jerk.
+3. Trajectory Genration- The code for this module is from line (362-431). This Module genrates future waypoints for car to follow and if the car decides to make a lane change the trajectory genration moudule creates a spline for car to follow. 
+
