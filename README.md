@@ -102,4 +102,4 @@ A really helpful resource for doing this project and creating smooth trajectorie
  5. Car was in lane and was able to make lane changes.
 
 The images below shows all these things. The total time and the best time matching indicates that we didn't volaite any of the above criteries.
-
+![alt text](https://github.com/shivareddy37/Path_Planning/blob/master/images/1.png)
